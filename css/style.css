@@ -1,0 +1,183 @@
+body{
+    background-color: rgb(156, 241, 213);
+    margin: 25px;
+}
+.super{
+    background: url(../img/montaña.jpg);
+    background-position: center;
+    background-attachment: contain; /*contenida en el contenedor*/
+    background-size: cover;
+    border-radius: 10px;
+    height: 500px;
+    padding-top: 20px;
+}
+header{
+    text-align: center;
+    margin-bottom: 0px;
+}
+h1{
+    color: rgb(255, 255, 255);
+    font-size: 350%; 
+    text-align: inherit;
+}
+.logo{
+    flex: 1 1 auto;
+}
+h2{
+    text-align: center;
+    color: indianred;
+}
+h3{
+    font-size: 175%;
+    color: rgb(36, 88, 15);
+    text-transform: capitalize;
+}
+nav{
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    justify-content: space-around;
+    padding:20px;
+    margin: 20px;
+    font-size: 200%;
+    border-radius: 6px;
+}
+.nav-options{
+    display: inline-block;
+    background-color:rgba(0, 0, 0, 0.335);
+    color: rgb(255, 250, 250);
+    padding: 7px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    height: 50px;
+}
+.nav-options:hover{
+    background-color: rgba(17, 97, 43, 0.294);
+}
+.menu-button{
+    background-color:rgb(243, 49, 49);
+    color: rgb(255, 250, 250);
+    padding: 7px 25px;
+    font-size: 80%;
+    border: 7px solid rgb(96, 119, 156);
+    display: none;
+}
+/*.menu-button:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 250, 250)
+}*/
+#art{
+    text-align: center;
+    font-size: 225%;
+    color: rgb(239, 245, 157);
+    background-color: rgb(24, 124, 94);
+    padding-top: 7px;
+    padding-bottom: 7px;
+}  
+main{
+    display: flex; /*onda columnas siempre en el padre*/
+    flex-direction: row; /*uno al lado del otro*/
+    flex-wrap: wrap; /*respeto el ancho de cada contenedor*/
+}
+p{
+    font-size: 150%;
+    text-align: justify;
+}
+.padre{
+    flex-grow: initial;
+    flex-basis: 60%; /*contenedor hijo cuanto ocupa*/
+}
+aside{
+    background-color: rgb(240, 208, 166);
+    padding: 40px;
+    flex-grow: initial;
+    flex-basis: 32%; /*contenedor hijo cuanto ocupa se lo comparte con padre*/
+    margin: 9px;
+    border-radius: 7px;
+    
+}
+#publi{
+    font-size: 250%;
+    color: rgb(102, 12, 187);
+    background-color: rgba(137, 43, 226, 0.39);
+    text-align: center ;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-right: 0px;
+}
+.columna{
+    background-color: rgba(37, 176, 211, 0.63);
+    padding: 10px;
+    margin: 9px;
+    border-radius: 7px;
+}
+#part1{
+    background-color: rgb(135, 184, 117);
+    padding: 25px;
+    color: honeydew;
+}
+button{
+    background: rgb(255, 0, 13);
+    color: rgb(0, 212, 250);
+    font-size: 150%;
+}
+button:hover{
+    background-color: mediumvioletred;
+    color: orange;
+}
+button:active{
+    background-color: plum;
+}
+footer{
+    background-color: rgba(41, 214, 206, 0.87);
+    color: rgb(5, 118, 211);
+    font-size: 150%;
+    padding: 10px;
+    margin: 0;
+}
+@media (max-width: 1260px){
+    main{
+        flex-wrap: nowrap; /*que no respete el ancho de as columnas sino que las acomode*/
+    }
+}
+@media (max-width: 860px)
+{
+    nav{
+        flex-direction: column;
+    }
+    .nav-options{
+        margin: 3px 0;
+    }
+    .menu-button{
+        display: inline-block;
+        background-color:rgba(0, 0, 0, 0.335);
+        color: rgb(255, 250, 250);
+        padding: 7px 25px;
+        font-size: 80%;
+        border: 7px solid rgba(255, 165, 201, 0);
+        border-radius: 5px;
+    }
+    .menu-button:hover{
+        background-color:rgba(0, 0, 0, 0.335);
+        color: rgb(255, 255, 255)
+    }
+    .desaparece{
+        display: none;
+    }
+    header{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    main{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .padre{
+        flex-grow: 1;
+        flex-basis: 100%; /*contenedor hijo cuanto ocupa*/
+    }
+    aside{
+        flex-grow: 1;
+        flex-basis: 100%; /*contenedor hijo cuanto ocupa se lo comparte con padre*/
+    }
+}
