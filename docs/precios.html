@@ -10,23 +10,55 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Urbanist:wght@200;500&display=swap"
         rel="stylesheet">
+    <!--ICONOS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="css/precios.css">
     <title>Diseño | Precios</title>
 </head>
 
 <body>
-    <nav>
-        <button class="menu-button" onclick="accion()">MENÚ</button>
-        <a class="nav-options desaparece" href="index.html">Inicio</a>
-        <a class="nav-options desaparece" href="precios.html">Precios</a>
-        <a class="nav-options desaparece"href="registro.html">Ingresar</a>
-        <a class="nav-options desaparece" href="contacto.html">Contacto</a>
-        <a class="nav-options desaparece" href="#">Busqueda</a>
-    </nav>
+    <div class="super">
+        <nav>
+            <button class="menu-button" onclick="accion()">MENÚ</button>
+            <a class="logo" href="#">-LOGO-</a>
+            <a class="nav-options desaparece" href="index.html"><i class="fa fa-home"></i> Inicio</a>
+            <a class="nav-options desaparece" href="registro.html"><i class="fa fa-user"></i> Ingresar</a>
+            <a class="nav-options desaparece" href="precios.html"><i class="fa fa-shopping-bag"></i> Precios</a>
+            <a class="nav-options desaparece" href="carrito.html"><i class="fa fa-shopping-cart"> Mi carrito</i></a>
+            <a class="nav-options desaparece" href="#"><i class="fa fa-magnifying-glass"></i> Busqueda</a>
+            <a class="nav-options desaparece" href="contacto.html"><i class="fa fa-envelope"></i> Contacto</a>
+        </nav>
+    </div>
+    <br><br>
     <section class="contenedor flex">
         <div class="planes">
             <h2>Plan 1</h2>
-            <hr>
+            <br>
+            <p id="descri">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo saepe obcaecati quasi impedit debitis ut
+                illo voluptas vitae numquam explicabo.</p>
+            <p>Blablabla</p>
+            <p class="precio">$100</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <hr><br>
+            <a class="comprar" href="carrito.html">Comprar</a>
+        </div>
+        <div class="planes">
+            <h2>Plan 1</h2>
+            <br>
+            <p id="descri">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo saepe obcaecati quasi impedit debitis ut
+                illo voluptas vitae numquam explicabo.</p>
+            <p>Blablabla</p>
+            <p class="precio">$100</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <hr><br>
+            <a class="comprar" href="carrito.html">Comprar</a>
+        </div>
+        <div class="planes">
+            <h2>Plan 1</h2>
+            <br>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo saepe obcaecati quasi impedit debitis ut
                 illo voluptas vitae numquam explicabo.</p>
             <p>Blablabla</p>
@@ -37,29 +69,7 @@
         </div>
         <div class="planes">
             <h2>Plan 1</h2>
-            <hr>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo saepe obcaecati quasi impedit debitis ut
-                illo voluptas vitae numquam explicabo.</p>
-            <p>Blablabla</p>
-            <p class="precio">$100</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <hr><br>
-            <a class="comprar" href="carrito.html">Comprar</a>
-        </div>
-        <div class="planes">
-            <h2>Plan 1</h2>
-            <hr>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo saepe obcaecati quasi impedit debitis ut
-                illo voluptas vitae numquam explicabo.</p>
-            <p>Blablabla</p>
-            <p class="precio">$100</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <hr><br>
-            <a class="comprar" href="carrito.html">Comprar</a>
-        </div>
-        <div class="planes">
-            <h2>Plan 1</h2>
-            <hr>
+            <br>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo saepe obcaecati quasi impedit debitis ut
                 illo voluptas vitae numquam explicabo.</p>
             <p>Blablabla</p>
@@ -76,10 +86,10 @@
         &copy; Derechos reservados 2021 by DANI.
     </footer>
     <script>
-        function accion(){
+        function accion() {
             console.log('Boton MENU presionado');
             var ancla = document.getElementsByClassName('nav-options');
-            for(var i=0; i<ancla.length;i++){
+            for (var i = 0; i < ancla.length; i++) {
                 ancla[i].classList.toggle('desaparece');
             }
         }
